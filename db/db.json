@@ -1,0 +1,107 @@
+{
+  "notes": [
+    {
+      "id": "note1",
+      "backgroundColor": "green",
+      "content": "In the interest of efficiency I only check my email for that on a Friday",
+      "color": "blue",
+      "size": 110,
+      "type": "text",
+      "x": 593,
+      "y": 178
+    },
+    {
+      "id": "note2",
+      "backgroundColor": "red",
+      "content": "Hooray! You made it :-) Happy to see you and welcome to Weframe!",
+      "color": "white",
+      "size": 200,
+      "type": "text",
+      "x": 106,
+      "y": 178
+    },
+    {
+      "id": "note3",
+      "backgroundColor": "blue",
+      "content": "There's no place like 127.0.0.1",
+      "size": 120,
+      "type": "text",
+      "x": 200,
+      "y": 606
+    },
+    {
+      "id": "note4",
+      "backgroundColor": "lightblue",
+      "content": "Our Office",
+      "color": "black",
+      "size": 150,
+      "type": "text",
+      "x": 792,
+      "y": 388
+    },
+    {
+      "id": "note5",
+      "content": "/img/office_01.jpg",
+      "size": 250,
+      "type": "media",
+      "x": 741,
+      "y": 532
+    },
+    {
+      "id": "note6",
+      "content": "/img/office_02.jpg",
+      "size": 250,
+      "type": "media",
+      "x": 963,
+      "y": 485
+    },
+    {
+      "id": "note7",
+      "content": "/img/office_03.jpg",
+      "size": 250,
+      "type": "media",
+      "x": 940,
+      "y": 264
+    },
+    {
+      "id": "note8",
+      "content": "/img/funny_01.jpg",
+      "size": 200,
+      "type": "media",
+      "x": 55,
+      "y": 475
+    },
+    {
+      "id": "note9",
+      "content": "/img/funny_02.jpg",
+      "size": 180,
+      "type": "media",
+      "x": 1392,
+      "y": 540
+    },
+    {
+      "id": "note10",
+      "content": "/img/funny_03.jpg",
+      "size": 250,
+      "type": "media",
+      "x": 413,
+      "y": 440
+    },
+    {
+      "id": "note11",
+      "content": "/img/funny_04.jpg",
+      "size": 80,
+      "type": "media",
+      "x": 290,
+      "y": 251
+    },
+    {
+      "id": "note12",
+      "content": "/img/funny_05.jpg",
+      "size": 330,
+      "type": "media",
+      "x": 1322,
+      "y": 68
+    }
+  ]
+}
