@@ -4,7 +4,6 @@ import Workspace from "../Workspace/Workspace";
 import "./App.scss";
 
 const App = () => {
-
   return (
     <div className="app">
       <Header />
@@ -15,4 +14,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
