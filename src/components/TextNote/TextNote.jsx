@@ -1,9 +1,9 @@
-import React, {useRef} from 'react';
-import Draggable from 'react-draggable';
-import {DEFAULT_COLOR} from '../../utils/note.util';
-import './textNote.scss';
+import React, { useRef } from "react";
+import Draggable from "react-draggable";
+import { DEFAULT_COLOR } from "../../utils/note.util";
+import "./textNote.scss";
 
-const TextNote = ({backgroundColor, content, color, size, x, y}) => {
+const TextNote = ({ backgroundColor, content, color, size, x, y }) => {
   const ref = useRef(null);
   return (
     <Draggable
