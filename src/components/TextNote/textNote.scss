@@ -1,0 +1,19 @@
+.text-note {
+  padding: 10px;
+
+  textarea {
+    color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

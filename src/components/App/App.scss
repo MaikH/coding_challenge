@@ -1,0 +1,20 @@
+/**
+ * CHALLENGE: One styling challenge. 
+ * * Provide design (maybe figma link)
+ * 
+ * the less important challenge ?
+ */
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    background: url('/assets/cross.png');
+    background-color: #cbcbbc;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.workspace {
+  position: relative;
+
+  .note {
+    box-shadow: 0 0 20px 0px #333;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

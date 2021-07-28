@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="-2 -2 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M36.625,27.875 L29.125,27.875 L29.125,20.375 C29.125,20.03 28.845,19.75 28.5,19.75 C28.155,19.75 27.875,20.03 27.875,20.375 L27.875,27.875 L20.375,27.875 C20.03,27.875 19.75,28.155 19.75,28.5 C19.75,28.845 20.03,29.125 20.375,29.125 L27.875,29.125 L27.875,36.625 C27.875,36.97 28.155,37.25 28.5,37.25 C28.845,37.25 29.125,36.97 29.125,36.625 L29.125,29.125 L36.625,29.125 C36.97,29.125 37.25,28.845 37.25,28.5 C37.25,28.155 36.97,27.875 36.625,27.875" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button-/-send-your-input-/-plus-/-default" transform="translate(-19.000000, -19.000000)">
+            <mask id="mask-2" fill="#333">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Fill-1" fill="#333" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
