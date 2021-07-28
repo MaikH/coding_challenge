@@ -1,19 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { connect } from "react-redux";
 
-import { getNotes } from "../../store/notes";
+import { getNotes, saveCreatedNote } from "../../store/notes";
 import TextNote from "../TextNote/TextNote";
 import "./workspace.scss";
 
-export const Workspace = ({ notes = [], getNotes }) => {
+export const Workspace = ({ notes = [], getNotes, saveCreatedNote }) => {
   useEffect(() => {
     getNotes();
+  }, []); // eslint-disable-line
+
+  const saveNote = useCallback((content) => {
+    saveCreatedNote({ content });
   }, []); // eslint-disable-line
 
   return (
     <div className="workspace">
       {notes.map((note, i) => (
-        <TextNote key={i} {...note} />
+        <TextNote key={i} {...note} saveNote={saveNote} />
       ))}
     </div>
   );
@@ -27,4 +31,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(mapStateToProps, {
   getNotes,
+  saveCreatedNote,
 })(Workspace);

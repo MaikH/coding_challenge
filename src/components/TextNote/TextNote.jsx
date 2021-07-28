@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Draggable from "react-draggable";
+
 import { DEFAULT_COLOR } from "../../utils/note.util";
 import "./textNote.scss";
 
@@ -12,8 +13,11 @@ const TextNote = ({
   y,
   type,
   id,
+  temp,
+  saveNote,
 }) => {
   const ref = useRef(null);
+
   return (
     <Draggable
       nodeRef={ref}
@@ -43,7 +47,10 @@ const TextNote = ({
             height: size,
           }}
         >
-          <textarea defaultValue={content} />
+          <textarea
+            defaultValue={content}
+            onBlur={(e) => (temp ? saveNote(e.target.value) : null)}
+          />
         </div>
       )}
     </Draggable>
