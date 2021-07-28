@@ -8,7 +8,7 @@ import "./workspace.scss";
 export const Workspace = ({ notes = [], getNotes }) => {
   useEffect(() => {
     getNotes();
-  }, []);  // eslint-disable-line
+  }, []); // eslint-disable-line
 
   return (
     <div className="workspace">
@@ -17,7 +17,7 @@ export const Workspace = ({ notes = [], getNotes }) => {
       ))}
     </div>
   );
-}
+};
 
 const mapStateToProps = (state, ownProps) => {
   return {
