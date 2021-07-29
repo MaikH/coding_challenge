@@ -11,11 +11,13 @@ const FETCH_NOTES = "cc/notes/FETCH_NOTES";
 const SET_NOTES = "cc/notes/SET_NOTES";
 const CREATE_NOTE = "cc/notes/CREATE_NOTE";
 const SAVE_CREATED_NOTE = "cc/notes/SAVE_CREATED_NOTE";
+const UPDATE_NOTE_ORDER = "cc/notes/UPDATE_NOTE_ORDER";
 
 export const getNotes = createAction(FETCH_NOTES);
 const setNotes = createAction(SET_NOTES);
 export const createNote = createAction(CREATE_NOTE);
 export const saveCreatedNote = createAction(SAVE_CREATED_NOTE);
+export const updateNoteOrder = createAction(UPDATE_NOTE_ORDER);
 
 export default handleActions(
   {
@@ -31,7 +33,7 @@ export default handleActions(
         const { notes } = action.payload;
         return merge(state, {
           loading: false,
-          notes,
+          notes: notes.map((note) => ({ ...note, order: 0 })),
         });
       },
     },
@@ -60,14 +62,35 @@ export default handleActions(
     [saveCreatedNote]: {
       next(state, action) {
         const { notes } = state;
+        const { content } = action?.payload;
         const temporaryNote = notes.find(({ temp }) => temp === true);
         const nonTemporaryNotes = notes.filter(({ temp }) => temp !== true);
         return {
           ...state,
           notes: [
             ...nonTemporaryNotes,
-            { ...temporaryNote, temp: false, content: action.payload.content },
+            { ...temporaryNote, temp: false, content },
           ],
+        };
+      },
+    },
+    [updateNoteOrder]: {
+      next(state, action) {
+        const newState = Object.assign({}, state);
+        const { notes } = newState;
+        const { id: lastDraggedId } = action?.payload;
+        const lastDragged = notes.filter(({ id }) => id === lastDraggedId);
+        const oldDraggedNotes = notes.filter(({ id }) => id !== lastDraggedId);
+        const orderedForLastDragged = [lastDragged, ...oldDraggedNotes];
+        const notesCount = notes.length;
+        return {
+          ...newState,
+          notes: notes.map((note) => ({
+            ...note,
+            order:
+              notesCount -
+              orderedForLastDragged.map(({ id }) => id).indexOf(note.id),
+          })),
         };
       },
     },

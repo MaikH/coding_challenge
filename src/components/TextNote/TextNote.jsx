@@ -15,9 +15,10 @@ const TextNote = ({
   id,
   temp,
   saveNote,
+  order,
+  updateNoteOrder
 }) => {
   const ref = useRef(null);
-
   return (
     <Draggable
       nodeRef={ref}
@@ -28,13 +29,14 @@ const TextNote = ({
         y,
       }}
       scale={1}
+      onStop={() => updateNoteOrder(id)}
     >
       {type === "media" ? (
         <img
           alt={id}
           src={content}
           ref={ref}
-          style={{ width: size, height: size }}
+          style={{ width: size, height: size, zIndex: order * 10 }}
           draggable={false}
         />
       ) : (
@@ -45,6 +47,7 @@ const TextNote = ({
             color: color ?? DEFAULT_COLOR,
             width: size,
             height: size,
+            zIndex: order * 10
           }}
         >
           <textarea
